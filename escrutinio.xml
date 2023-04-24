@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="estilo.xsl" type="text/xsl"?>
+<escrutinio elecciones="Parlamento de Cataluña">
+    <escanios>135</escanios>
+    <porciento_escrutado>100</porciento_escrutado>
+    <votos>
+        <contabilizados>
+            <cantidad>3657450</cantidad>
+            <porcentaje>69.56</porcentaje>
+        </contabilizados>
+        <abstenciones>
+            <cantidad>1600510</cantidad>
+            <porcentaje>30.44</porcentaje>
+        </abstenciones>
+        <nulos>
+            <cantidad>32232</cantidad>
+            <porcentaje>0.88</porcentaje>
+        </nulos>
+        <blancos>
+            <cantidad>52899</cantidad>
+            <porcentaje>1.45</porcentaje>
+        </blancos>
+    </votos>
+    <resultados>
+        <partido nombre="CiU" carru="mas">
+            <electos>50</electos>
+            <votos_numero>1112341</votos_numero>
+            <votos_porciento>30.68</votos_porciento>
+        </partido>
+        <partido nombre="ERC-Cat" carru="junqueras">
+            <electos>21</electos>
+            <votos_numero>496292</votos_numero>
+            <votos_porciento>13.68</votos_porciento>
+        </partido>
+        <partido nombre="PSC" carru="navarro">
+            <electos>20</electos>
+            <votos_numero>523333</votos_numero>
+            <votos_porciento>14.43</votos_porciento>
+        </partido>
+        <partido nombre="PP" carru="camacho">
+            <electos>19</electos>
+            <votos_numero>471197</votos_numero>
+            <votos_porciento>12.99</votos_porciento>
+        </partido>
+        <partido nombre="ICV-EUiA" carru="herrera">
+            <electos>13</electos>
+            <votos_numero>358857</votos_numero>
+            <votos_porciento>9.89</votos_porciento>
+        </partido>
+        <partido nombre="C's" carru="rivera">
+            <electos>9</electos>
+            <votos_numero>274925</votos_numero>
+            <votos_porciento>7.58</votos_porciento>
+        </partido>
+        <partido nombre="CUP" carru="fernandez">
+            <electos>3</electos>
+            <votos_numero>126219</votos_numero>
+            <votos_porciento>3.48</votos_porciento>
+        </partido>
+    </resultados>
+</escrutinio>
