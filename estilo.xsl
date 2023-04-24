@@ -46,7 +46,7 @@
       		  	<main>
               <section class="section_container">
                   <article class="article_num_escaños">
-                    <span> Nro. de Escaños: <xsl:value-of select="escrutinio/escanios"/> </span>
+                    <span> Nro. de Escaños: <xsl:value-of select="escrutinio/escanios"/> <br></br></span>
                     <span> Porciento Escrutado:<xsl:value-of select="escrutinio/porciento_escrutado"/>   </span>
                   </article>
                   <article class="article_datos_generales">
@@ -61,17 +61,25 @@
                   <div class="franja"></div>
                   <table>
                     <tr>
+                      <th>&nbsp;</th>
                       <th>PARTIDO</th>
                       <th>VOTOS </th>
                       <th>ESCAÑOS </th>
                       <th>PORCENTAJE </th>
                     </tr>
-                    <tr>
-                      <td> <xsl:value-of select="escrutinio/resultados/partido/@nombre"/></td>
-                      <td> <xsl:value-of select="escrutinio/resultados/partido/votos_numero"/></td>
-                      <td> <xsl:value-of select="escrutinio/resultados/partido/electos"/></td>
-                      <td> <xsl:value-of select="escrutinio/resultados/partido/votos_porciento"/></td>
+                  
+                     <xsl:for-each select="escrutinio/resultados/partido">      
+                    <td>
+                    <img src="img/CIU.png" alt ="CIU"/>
+                    </td>
+                   
+                      <tr>
+                      <td> <xsl:value-of select="@nombre"/></td>
+                      <td> <xsl:value-of select="votos_numero"/></td>
+                      <td> <xsl:value-of select="electos"/></td>
+                      <td> <xsl:value-of select="votos_porciento"/></td>
                     </tr>
+                    </xsl:for-each>
                   </table>
                   </article>
                   <footer>
