@@ -29,10 +29,9 @@
                             <img src="img/header.png" alt="banner_header"/>  
                       </div>
                                   <div class="fotos">
-                                  <xsl:for-each select="escrutinio/resultados/partido/@carru"/>
-                                  <ul>
-                                  <img src="img/carru-{@carru}.jpg" alt="fotos"/></ul>
-                                  
+                                  <xsl:for-each select="partido/@carru"/>
+                                  <img src="img/carru-{@carru}.jpg" alt="carru-mas"/><xsl:value-of select="partido/@carru"/>
+                                
                                   <img src="img/carru-fernandez.jpg" alt="carru-fernadez"/>
                                   <img src="img/carru-herrera.jpg" alt="carru-herrera" />
                                   <img src="img/carru-junqueras.jpg" alt="carru-junqueras"/>
@@ -50,10 +49,11 @@
                   <article class="article_num_escaños">
                     <div> Nro. de Escaños: <xsl:value-of select="escrutinio/escanios"/></div>
                     <div> Porciento Escrutado:<xsl:value-of select="escrutinio/porciento_escrutado"/> </div>
+                    <img src="img/ico-e12.png" alt="icon12"/> 
                   </article>
                   <article class="article_datos_generales">
                     <ul> 
-                      <li><img src="img/folio.png" alt="folio"/><span>Votos Contabilizados :<xsl:value-of select="escrutinio/votos/contabilizados/cantidad"/> votos| <xsl:value-of select="escrutinio/votos/contabilizados/porcentaje"/> %</span></li>
+                      <li><img src="img/folio.png"  alt="folio"/><span>Votos Contabilizados :<xsl:value-of select="escrutinio/votos/contabilizados/cantidad"/> votos| <xsl:value-of select="escrutinio/votos/contabilizados/porcentaje"/> %</span></li>
                       <li><img src="img/folio.png" alt="folio"/><span>Abstenciones :<xsl:value-of select="escrutinio/votos/abstenciones/cantidad"/> votos| <xsl:value-of select="escrutinio/votos/abstenciones/porcentaje"/>% </span></li>
                       <li><img src="img/folio.png" alt="folio"/><span>Nulos :<xsl:value-of select="escrutinio/votos/nulos/cantidad"/>votos | <xsl:value-of select="escrutinio/votos/nulos/porcentaje"/>% </span></li>
                       <li><img src="img/folio.png" alt="folio"/><span>Blancos: <xsl:value-of select="escrutinio/votos/blancos/cantidad"/> votos | <xsl:value-of select="escrutinio/votos/blancos/porcentaje"/> %</span></li>
