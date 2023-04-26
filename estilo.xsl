@@ -28,16 +28,16 @@
                       <div class="banner_header">  
                             <img src="img/header.png" alt="banner_header"/>  
                       </div>
-                                  <div class="fotos">
-                                  <img src="img/carru-camacho.jpg" alt="carru-camacho"/>
-                                  <img src="img/carru-fernandez.jpg" alt="carru-fernadez"/>
-                                  <img src="img/carru-herrera.jpg" alt="carru-herrera" />
-                                  <img src="img/carru-junqueras.jpg" alt="carru-junqueras"/>
-                                  <img src="img/carru-mas.jpg" alt="carru-mas" />
-                                  <img src="img/carru-navarro.jpg" alt="carru-navarro"/>
-                                  <img src="img/carru-rivera.jpg" alt="carru-rivera" />
+                                  <div class="fotos-candidatos">
 
-                                </div>
+                                  <xsl:for-each select="escrutinio/resultados/partido"/>
+
+                                  <img src="img/carru-{@carru}.jpg" alt="Imagen de {@carru}" />
+
+                                  
+
+                                  </div>
+                          
                           <p>Sede : <xsl:value-of select="escrutinio/@elecciones"/> </p>
                   </div>
                 
@@ -45,10 +45,11 @@
 
       		  	<main>
               <section class="section_container">
-                  <article class="article_num_escaños">
-                    <span> Nro. de Escaños: <xsl:value-of select="escrutinio/escanios"/> <br></br></span>
-                    <span> Porciento Escrutado:<xsl:value-of select="escrutinio/porciento_escrutado"/>   </span>
-                  </article>
+                   <article class="article_num_escaños">
+                    <div> Nro. de Escaños: <xsl:value-of select="escrutinio/escanios"/> </div>
+                    <div> Porciento Escrutado:<xsl:value-of select="escrutinio/porciento_escrutado"/>  </div>
+                    <img src="img/ico-e12.png" alt="icon12"/> 
+                  </article> 
                   <article class="article_datos_generales">
                     <ul> 
                       <li><img src="img/folio.png" alt="folio"/><span>Votos Contabilizados :<xsl:value-of select="escrutinio/votos/contabilizados/cantidad"/> votos| <xsl:value-of select="escrutinio/votos/contabilizados/porcentaje"/> %</span></li>
@@ -68,16 +69,15 @@
                       <th>PORCENTAJE </th>
                     </tr>
                   
-                    <td>
-                    <img src="img/CIU.png" alt ="CIU"/>
-                    </td>
                      <xsl:for-each select="escrutinio/resultados/partido">      
                    
                       <tr>
+                      <td><img src="img/{@nombre}.png" alt="Imagen Partido {@nombre}"/>  </td>
+
                       <td> <xsl:value-of select="@nombre"/></td>
                       <td> <xsl:value-of select="votos_numero"/></td>
                       <td> <xsl:value-of select="electos"/></td>
-                      <td> <xsl:value-of select="votos_porciento"/></td>
+                      <td> <xsl:value-of select="votos_porciento"/>%</td>
                     </tr>
                     </xsl:for-each>
                   </table>
