@@ -22,7 +22,7 @@
 				<link rel="stylesheet" href="css/style.css" type="text/css" />
 			</head>
 			<body>
-      			<div class="fondo_body">
+      			<div class="container">
         			<header>
                  <div class="fondo_header">
                       <div class="banner_header">  
@@ -34,7 +34,7 @@
                                   </xsl:for-each>
                                   </div>
                            <div>
-                           <p>Sede : <xsl:value-of select="escrutinio/@elecciones"/> </p>
+                           Sede : <xsl:value-of select="escrutinio/@elecciones"/> 
                            </div>
                   </div>
                 
@@ -79,9 +79,7 @@
                     </xsl:for-each>
                   </table>
                   </article>
-                  <footer>
-                    <p>1° Lenguaje de Marcas</p>
-                  </footer>
+                 <footer>1° Lenguaje de Marcas</footer>
            	   </section>
      		 </main>
    		 </div>

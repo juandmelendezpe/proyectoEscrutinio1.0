@@ -2,26 +2,30 @@
     box-sizing: border-box;
 }
 :root{
-    --bg-color: #fff;
-    --text-color: #bbb5b5;
-    --bg-footer: #111111;
-    --bg-color-menu :#893d3d;
-    --bg-color-etiqueta :#29106a;
+    --color-fondo-naranja: #f5a500;
+    --color-fondo-marron: #a52a2a;
+    --color_titulo: #807ffe;
+    --text-color-white: #f5f5dc;
+    --text-color-black: #000;
+    --color-fondo-ubicacion: #e4e4f0;
+    --color-fondo-prevision: #b3b3cd;
+    --color-fondo-prevision-header: #6269a0;
+    --color-fondo-footer: #1d4d8f;
 
 }
 /*************** body****************/
 
 body{
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/fondo_header_body.gif);
+    background-repeat: repeat-x;
 }
 
-.fondo_body{
-    background-image: url(../img/fondo_header_body.gif);
-   width: 100%;
-   height: 265px;
-   
+.containar{
+   width: 60%;
+   max-width: 800px;
+    margin: auto;
 }
 /*************** HEADER****************/
 
@@ -29,15 +33,18 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 37%;
 }
 
 .fondo_header{
     background-image: url(../img/fondo_header.jpg);
     background-size: cover;
     width: 42%;
-    height: 210px;
+    height: 265px;
     justify-content: center;
+    color: var(--text-color-white);
+    font-size: 1.5rem;
+    text-align: center;
 }
 .banner_header{
     width: 100%;
@@ -48,35 +55,22 @@ header{
     justify-content: center;
 
 }
-p{
-    text-align: center;
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 1px;
-}
 
 .banner_header img{
     height: 120px;
     width: 100%;
 }
 .fotos-candidatos{
-    width: 100%;
-    height: 30%;
-    justify-content: center;
-    display: flex;
+    text-align: center;
     margin-top: 30px;
 }
+.fotos-candidatos img{
+height: 60px;}
 /****************************************main**********/
-main{
- width: 100%;
- height: 100%;
- padding: 0px;
- margin: 0px ;
- 
-}
+
 .section_container{
     width: 42%;
-    height: 160%;
+    height: 55%;
     background-color: #7a0c0a;
     margin-left: 29%;
 }
@@ -96,7 +90,7 @@ main{
 
 .article_datos_generales{
     width: 100%;
-    height: 20%;
+    height: 21%;
     margin-top: 15px;
     background-color: rgb(237, 216, 189);
     text-align: justify;
@@ -111,11 +105,11 @@ main{
     height: 55%;
     background-color: #b9854d;
 }
-.article_table_votos img {
+.article_table_votos img{
 height: 17px;
 
 }
-.article_table_votos table {
+.article_table_votos table{
     width: 80%;
     margin: -20px auto 0 auto;
     border-spacing: 0;
@@ -126,7 +120,7 @@ height: 17px;
     height: 10%;
 }
 
-.article_table_votos th {
+.article_table_votos th{
     color: #fff;
     text-align: left;
     border-bottom: 1px solid #fff;
@@ -134,12 +128,14 @@ height: 17px;
     
 }
 
-.article_table_votos td {
+.article_table_votos td{
     border-bottom: 1px solid #111111;
     height: 25px;
 }
 
-footer p{
-    color: #fff;
+footer {
+    background-color: var(--color-fondo-marron);
+    color: var(--text-color-white);
     text-align: center;
+    font-size: 1.4rem;
 }
