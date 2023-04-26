@@ -29,16 +29,13 @@
                             <img src="img/header.png" alt="banner_header"/>  
                       </div>
                                   <div class="fotos-candidatos">
-
-                                  <xsl:for-each select="escrutinio/resultados/partido"/>
-
+                                  <xsl:for-each select="escrutinio/resultados/partido">
                                   <img src="img/carru-{@carru}.jpg" alt="Imagen de {@carru}" />
-
-                                  
-
+                                  </xsl:for-each>
                                   </div>
-                          
-                          <p>Sede : <xsl:value-of select="escrutinio/@elecciones"/> </p>
+                           <div>
+                           <p>Sede : <xsl:value-of select="escrutinio/@elecciones"/> </p>
+                           </div>
                   </div>
                 
          			 </header>
